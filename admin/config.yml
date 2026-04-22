@@ -1,1 +1,57 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "hero"
+    label: "首屏内容"
+    folder: "content"
+    create: false
+    fields:
+      - {label: "艺术家姓名", name: "brandName", widget: "string"}
+      - {label: "主标题", name: "decodeText", widget: "string"}
+      - {label: "副标题", name: "subtitle", widget: "string"}
+      - {label: "按钮1文字", name: "ctaPrimary", widget: "string"}
+      - {label: "按钮2文字", name: "ctaSecondary", widget: "string"}
+
+  - name: "gallery"
+    label: "作品画廊"
+    folder: "content/gallery"
+    create: true
+    fields:
+      - {label: "作品名称", name: "title", widget: "string"}
+      - {label: "创作时间", name: "date", widget: "string"}
+      - {label: "作品图片", name: "image", widget: "image"}
+      - {label: "作品描述", name: "description", widget: "text"}
+
+  - name: "exhibitions"
+    label: "展览经历"
+    folder: "content/exhibitions"
+    create: true
+    fields:
+      - {label: "日期", name: "date", widget: "string"}
+      - {label: "城市", name: "city", widget: "string"}
+      - {label: "展览名称", name: "venue", widget: "string"}
+      - {label: "状态", name: "status", widget: "select", options: ["即将开始", "进行中", "已结束"]}
+
+  - name: "about"
+    label: "关于我"
+    folder: "content/about"
+    create: false
+    fields:
+      - {label: "大标题", name: "heroTitle", widget: "string"}
+      - {label: "副标题", name: "heroSubtitle", widget: "string"}
+      - {label: "姓名", name: "artistName", widget: "string"}
+      - {label: "定位", name: "artistSubtitle", widget: "string"}
+      - {label: "个人简介", name: "description", widget: "text"}
+      - {label: "邮箱", name: "email", widget: "string"}
+      - {label: "电话", name: "phone", widget: "string"}
+      - {label: "地址", name: "address", widget: "string"}
+
+
+
+
 
